@@ -23,7 +23,6 @@ export default function Home() {
                             </a>
                         </div>
                         <Menu />
-
                     </div>
                 </div>
             </div>
@@ -35,7 +34,7 @@ export default function Home() {
                     <h3 className="hero-subhead">Ganhe 30 dias de benefícios gratuitos para você!</h3>
                     <a href="#formulario-topo" className="button w-button">PRÉ-CADASTRO</a>
                 </div>
-                <img src="/images/soumais-banner.png" data-w-id="77e69727-c455-8e07-0990-833a661c94ea" height="" srcset="/images/soumais-banner-p-500.png 500w, /images/soumais-banner.png 690w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 50vw, 100vw" alt="" className="r-hero-image hero-image" />
+                <img className="r-hero-image hero-image" src="/images/soumais-banner.png" data-w-id="77e69727-c455-8e07-0990-833a661c94ea" height="" srcset="/images/soumais-banner-p-500.png 500w, /images/soumais-banner.png 690w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 50vw, 100vw" alt="" />
             </div>
 
             <div id="about" className="section wide img">

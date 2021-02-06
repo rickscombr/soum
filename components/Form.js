@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-
+import InputMask from "react-input-mask";
 
 const Form = ({ color }) => {
 
@@ -41,6 +41,10 @@ const Form = ({ color }) => {
         setEmail('');
         setPhone('');
         setHobby('');
+        
+        document.querySelectorAll("input[type=text]").forEach(
+          input => (input.value = "")
+        );
       });
     },
     [name, email, phone, hobby],
@@ -74,7 +78,7 @@ const Form = ({ color }) => {
             onKeyUp={e => setEmail(e.target.value)}
           />
 
-          <input
+          <InputMask
             type="text"
             className="input w-input"
             maxlength="256"
@@ -83,6 +87,7 @@ const Form = ({ color }) => {
             placeholder="Telefone"
             id="Telefone"
             required=""
+            mask="(99) 99999-9999"
             onKeyUp={e => setPhone(e.target.value)}
           />
 
