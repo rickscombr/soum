@@ -1,5 +1,6 @@
-import Head from 'next/head'
-
+import Head from 'next/head';
+import Form from '../components/Form';
+import Menu from '../components/Menu';
 
 export default function Home() {
   return (
@@ -21,17 +22,8 @@ export default function Home() {
                                 <img src="images/soumais.png" width="120" alt="" />
                             </a>
                         </div>
-                        <div className="nav-menu-wrap">
-                            <nav role="navigation" className="nav-menu-2 w-nav-menu">
-                                <a href="#about" className="nav-link w-nav-link">Sobre</a>
-                                <a href="#features" className="nav-link w-nav-link">Benefícios</a>
-                                <a href="#Como-funciona" className="nav-link w-nav-link">Como funciona</a>
-                                <a href="#formulario-topo" className="nav-link w-nav-link">Formulário</a>
-                            </nav>
-                            <div className="menu-button w-nav-button">
-                                <div className="menu-icon w-icon-nav-menu"></div>
-                            </div>
-                        </div>
+                        <Menu />
+
                     </div>
                 </div>
             </div>
@@ -53,23 +45,7 @@ export default function Home() {
                 </div>
                 <div className="wrapper formulario">
                     <div id="formulario-topo" data-w-id="05fa133e-aecf-16ac-f08d-aefc09cb470d" className="ri-about wrap">
-                        <h2 className="pink">Faça seu pré-cadastro</h2>
-                        <p>Uma vida de benefícios começa aqui!</p>
-                        <div className="form-block-2 w-form">
-                            <form id="email-form-2" name="email-form-2" data-name="Email Form 2">
-                                <input type="text" className="input w-input" maxlength="256" name="Nome-2" data-name="Nome 2" placeholder="Nome" id="Nome-2" required="" />
-                                <input type="email" className="input w-input" maxlength="256" name="email-3" data-name="Email 3" placeholder="Email" id="email-3" required="" />
-                                <input type="tel" className="input w-input" maxlength="256" name="Telefone" data-name="Telefone" placeholder="Telefone" id="Telefone-3" required="" />
-                                <input type="tel" className="input w-input" maxlength="256" name="Hobby" data-name="Hobby" placeholder="Qual seu hobby?" id="Hobby-2" required="" />
-                                <input type="submit" value="ENVIAR" data-wait="Aguarde por favor..." className="button form-button w-button" />
-                            </form>
-                            <div className="w-form-done">
-                                <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div className="w-form-fail">
-                                <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
-                        </div>
+                        <Form color="pink" />
                     </div>
                 </div>
             </div>
@@ -144,15 +120,15 @@ export default function Home() {
             </div>
 
             <div className="bottom-image-wrap">
-                <img src="/images/rodape-celulares-soumais.jpg" 
-                    sizes="(max-width: 1980px) 100vw, 1980px" 
-                    srcset="/images/rodape-celulares-soumais-p-500.jpeg 500w, 
-                            /images/rodape-celulares-soumais-p-1080.jpeg 1080w, 
-                            /images/rodape-celulares-soumais-p-1600.jpeg 1600w, 
+                <img src="/images/rodape-celulares-soumais.jpg"
+                    sizes="(max-width: 1980px) 100vw, 1980px"
+                    srcset="/images/rodape-celulares-soumais-p-500.jpeg 500w,
+                            /images/rodape-celulares-soumais-p-1080.jpeg 1080w,
+                            /images/rodape-celulares-soumais-p-1600.jpeg 1600w,
                             /images/rodape-celulares-soumais.jpg 1980w" alt=""
                 />
             </div>
-  
+
             <div id="download" className="section wide purple">
                 <div data-w-id="376e2a1f-ec70-0dab-11ea-b1863101e37b" className="ri-download wrap">
                     <h2>Preparado para começar?</h2>
@@ -164,23 +140,7 @@ export default function Home() {
 
             <div className="section wide">
                 <div id="Formulario-rodape" data-w-id="8cf47482-19f1-1f52-25ba-910a60bc91de" className="ri-wide wrap">
-                    <h2>Faça seu pré-cadastro</h2>
-                    <p>Uma vida de benefícios começa aqui!</p>
-                    <div className="w-form">
-                        <form id="email-form-2" name="email-form-2" data-name="Email Form 2">
-                            <input type="text" className="input w-input" maxlength="256" name="Nome" data-name="Nome" placeholder="Nome" id="Nome" required="" />
-                            <input type="email" className="input w-input" maxlength="256" name="email-3" data-name="Email 3" placeholder="Email" id="email-3" required="" />
-                            <input type="tel" className="input w-input" maxlength="256" name="Telefone" data-name="Telefone" placeholder="Telefone" id="Telefone" required="" />
-                            <input type="tel" className="input w-input" maxlength="256" name="Hobby" data-name="Hobby" placeholder="Qual seu hobby?" id="Hobby-3" required="" />
-                            <input type="submit" value="ENVIAR" data-wait="Aguarde por favor..." className="button form-button w-button" />
-                        </form>
-                        <div className="w-form-done">
-                            <div>Thank you! Your submission has been received!</div>
-                        </div>
-                        <div className="w-form-fail">
-                            <div>Oops! Something went wrong while submitting the form.</div>
-                        </div>
-                    </div>
+                    <Form />
                 </div>
             </div>
 
@@ -195,8 +155,6 @@ export default function Home() {
                 </div>
             </div>
 
-            <script type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.extJsJQuery }}></script>
-            <script type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.extJsSouMais }}></script>
         </div>
     )
 }

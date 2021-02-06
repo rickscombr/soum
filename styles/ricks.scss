@@ -1,4 +1,7 @@
 /*Modificações Ricks*/
+html {
+    scroll-behavior: smooth;
+}
 
 .section.center {
     background-size: auto, cover;
@@ -9,15 +12,16 @@
     -moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     -ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-    opacity:0;
+    opacity:1;
   }
-  
+
   .r-hero-image {
     -webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     -moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     -ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-    opacity:0;
+    opacity:1;
+    transition: transform 0.3s ease-in-out;    
   }
 
 .ri-about {
@@ -25,7 +29,7 @@
     -moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     -ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-    opacity:0;
+    opacity:1;
 }
 
 .ri-feature {
@@ -33,7 +37,7 @@
     -moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     -ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-    opacity:0;
+    opacity:1;
 }
 
 .ri-download {
@@ -41,7 +45,7 @@
     -moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     -ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-    opacity:0;
+    opacity:1;
 }
 
 .ri-wide {
@@ -49,5 +53,34 @@
     -moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     -ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
     transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-    opacity:0;
+    opacity:1;
+}
+
+.w-form-done.show,
+.w-form-fail.show {
+    display: block;
+}
+
+@media screen and (max-width: 991px) {
+    .nav-menu-2--open {
+        .w-nav-button {
+            background: #000;
+        }
+        .w-nav-menu {
+            display: flex !important;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #000;
+            text-align: center;
+            overflow: visible;
+            min-width: 200px;
+        }
+    }
+
+    .input {
+        text-align: left;
+    }
 }
